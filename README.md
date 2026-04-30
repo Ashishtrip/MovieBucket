@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+## NOTE: the website of TMDB is not servicable for the indian servers, kindly load the project using VPN
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
