@@ -11,9 +11,9 @@ const ProtectedRoute = ({ children }) => {
     // For simplicity, let's render a mock login prompt right here if not authenticated.
     return (
       <div className="min-h-[60vh] flex items-center justify-center px-4">
-        <div className="bg-gray-800 p-8 rounded-xl shadow-lg max-w-md w-full text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Authentication Required</h2>
-          <p className="text-gray-400 mb-8">You must be logged in to view your Watchlist.</p>
+        <div className="bg-themeBase p-8 rounded-xl shadow-lg max-w-md w-full text-center">
+          <h2 className="text-2xl font-bold text-themeAccent mb-4">Authentication Required</h2>
+          <p className="text-themeAccent mb-8">You must be logged in to view your Watchlist.</p>
           <LoginButton />
         </div>
       </div>
@@ -28,7 +28,7 @@ const LoginButton = () => {
   return (
     <button
       onClick={login}
-      className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition w-full"
+      className="bg-themeAccent text-themeBase font-bold shadow-glow hover:bg-themeGlow transition duration-300 font-bold py-2 px-6 rounded-full transition w-full"
     >
       Mock Log In
     </button>

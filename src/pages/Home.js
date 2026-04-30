@@ -13,8 +13,8 @@ const Home = () => {
   return (
     <div className="space-y-12 pb-12">
       {/* Hero Section */}
-      <section className="relative h-[60vh] bg-gray-900 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent z-10" />
+      <section className="relative h-[60vh] bg-themeBase flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-themeBase via-themeBase/60 to-transparent z-10" />
         {trendingMovies?.results?.[0] && (
           <img
             src={`https://image.tmdb.org/t/p/original${trendingMovies.results[0].backdrop_path}`}
@@ -23,17 +23,17 @@ const Home = () => {
           />
         )}
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto mt-16">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-themeAccent mb-6 drop-shadow-lg">
             Discover Your Next Favorite Story
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-md">
+          <p className="text-lg md:text-xl text-themeAccent mb-8 max-w-2xl mx-auto drop-shadow-md">
             Explore millions of movies and TV shows. Keep track of what you want to watch.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link to="/movies" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+            <Link to="/movies" className="bg-themeAccent text-themeBase font-bold shadow-glow hover:bg-themeGlow transition duration-300 font-bold py-3 px-8 rounded-full transition shadow-lg">
               Browse Movies
             </Link>
-            <Link to="/tv-shows" className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+            <Link to="/tv-shows" className="bg-themeBase border border-themeAccent hover:bg-themeGlow hover:text-themeBase text-themeAccent font-bold py-3 px-8 rounded-full transition shadow-lg">
               Explore TV
             </Link>
           </div>
@@ -43,8 +43,8 @@ const Home = () => {
       {/* Trending Movies Section */}
       <section className="container mx-auto px-4 lg:px-8">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-white border-l-4 border-blue-500 pl-3">Trending Movies</h2>
-          <Link to="/movies" className="text-blue-400 hover:text-blue-300 transition text-sm font-semibold">View All</Link>
+          <h2 className="text-2xl font-bold text-themeAccent border-l-4 border-themeGlow pl-3">Trending Movies</h2>
+          <Link to="/movies" className="text-themeGlow hover:text-themeGlow hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition text-sm font-semibold">View All</Link>
         </div>
         
         {moviesLoading ? (
@@ -63,8 +63,8 @@ const Home = () => {
       {/* Trending TV Shows Section */}
       <section className="container mx-auto px-4 lg:px-8">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-white border-l-4 border-blue-500 pl-3">Trending TV Shows</h2>
-          <Link to="/tv-shows" className="text-blue-400 hover:text-blue-300 transition text-sm font-semibold">View All</Link>
+          <h2 className="text-2xl font-bold text-themeAccent border-l-4 border-themeGlow pl-3">Trending TV Shows</h2>
+          <Link to="/tv-shows" className="text-themeGlow hover:text-themeGlow hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition text-sm font-semibold">View All</Link>
         </div>
 
         {tvLoading ? (

@@ -41,18 +41,18 @@ const Search = () => {
 
   return (
     <div className="container mx-auto px-4 lg:px-8 py-8 min-h-[70vh]">
-      <h1 className="text-3xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4">
+      <h1 className="text-3xl font-bold text-themeAccent mb-8 border-l-4 border-themeGlow pl-4">
         Search Results for "{query}"
       </h1>
       
       {!query ? (
-        <p className="text-gray-400">Please enter a search term.</p>
+        <p className="text-themeAccent">Please enter a search term.</p>
       ) : loading ? (
         <LoadingSpinner />
       ) : error ? (
         <ErrorMessage message={error} />
       ) : searchResults?.results?.length === 0 ? (
-        <p className="text-gray-400">No movies or TV shows found matching "{query}".</p>
+        <p className="text-themeAccent">No movies or TV shows found matching "{query}".</p>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
           {searchResults?.results?.map((item) => (

@@ -19,7 +19,7 @@ function App() {
     <AuthProvider>
       <WatchlistProvider>
         <Router>
-          <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100 font-sans selection:bg-blue-500/30">
+          <div className="flex flex-col min-h-screen bg-themeBase text-themeAccent font-sans selection:bg-themeGlow/30 selection:text-themeBase">
             <Header />
             <main className="flex-grow">
               <Routes>

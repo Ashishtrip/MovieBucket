@@ -10,7 +10,7 @@ const Movies = () => {
 
   return (
     <div className="container mx-auto px-4 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4">Popular Movies</h1>
+      <h1 className="text-3xl font-bold text-themeAccent mb-8 border-l-4 border-themeGlow pl-4">Popular Movies</h1>
       
       {loading ? (
         <LoadingSpinner />
