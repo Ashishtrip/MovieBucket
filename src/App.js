@@ -13,6 +13,7 @@ import TvShows from './pages/TvShows';
 import Detail from './pages/Detail';
 import Search from './pages/Search';
 import Watchlist from './pages/Watchlist';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -29,15 +30,16 @@ function App() {
                 <Route path="/search" element={<Search />} />
                 <Route path="/movie/:id" element={<Detail />} />
                 <Route path="/tv-show/:id" element={<Detail />} />
-                
-                {/* Protected Route */}
-                <Route 
-                  path="/watchlist" 
+                <Route path="/login" element={<Login />} />
+
+                {/* Protected Route – redirects to /login when unauthenticated */}
+                <Route
+                  path="/watchlist"
                   element={
                     <ProtectedRoute>
                       <Watchlist />
                     </ProtectedRoute>
-                  } 
+                  }
                 />
               </Routes>
             </main>
